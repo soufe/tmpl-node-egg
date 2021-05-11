@@ -1,0 +1,10 @@
+{
+  "extends": "eslint-config-egg/typescript",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "jsdoc/check-tag-names": 0,
+    "jsdoc/check-param-names": 0
+  } 
+}
