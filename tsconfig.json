@@ -82,7 +82,6 @@
   "exclude": [
     "app/public",
     "app/views",
-    "app/web",
     "coverage",
     "logs",
     "node_modules*",

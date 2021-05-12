@@ -1,21 +1,21 @@
-import { Effect, Reducer, Subscription } from 'umi';
+import type { Effect, Reducer, Subscription } from 'umi';
 
 export interface UseModelState {
-  welcome: string
+  welcome: string;
 }
 
 export interface UseModelType {
-  namespace: 'useModel',
-  state: UseModelState,
+  namespace: 'useModel';
+  state: UseModelState;
   effects: {
-    query: Effect
-  }
+    query: Effect;
+  };
   reducers: {
-    change: Reducer<UseModelState>
-  }
+    change: Reducer<UseModelState>;
+  };
   subscriptions: {
-    setup: Subscription
-  }
+    setup: Subscription;
+  };
 }
 
 const UseModel: UseModelType = {
@@ -24,9 +24,8 @@ const UseModel: UseModelType = {
     welcome: 'hi',
   },
   effects: {
-    * query({ payload }, { call, put }) {
-      console.log(payload);
-      yield call('asyncFn', 1000);
+    *query({ payload }, { call, put }) {
+      yield call(payload, 1000);
       yield put({ type: 'change' });
     },
   },

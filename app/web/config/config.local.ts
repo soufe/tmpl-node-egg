@@ -1,4 +1,4 @@
-import { APP_NAME } from '../../../sfe'
+import { APP_NAME } from '../../../sfe';
 
 export default {
   proxy: {

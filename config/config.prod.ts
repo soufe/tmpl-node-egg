@@ -15,7 +15,7 @@ export default () => {
 
   const bizConfig = {
     SOU_SERVER_URL: 'https://www.sousoushenbian.com',
-    USER_TOKEN: '65905795omvjro0o6ft6uqopu8hmrh2',
+    USER_TOKEN: '7573893fr38ovdem51q8vkrqjb5t8l24',
   };
 
   return {

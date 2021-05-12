@@ -1,4 +1,7 @@
 **/*.d.ts
 node_modules/
 coverage
-app/web
+config
+app.ts
+app/controller
+app/service

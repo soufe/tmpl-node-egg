@@ -7,9 +7,9 @@ export interface UserInfo {
 }
 
 export const getUserInfo = (params: UserInfo): Promise<any> => {
-  return request('restapi/v1/user',  GET, params);
+  return request('restapi/v1/user', GET, params);
 };
 
 export const postUserInfo = (params: UserInfo): Promise<any> => {
-  return request('restapi/v1/user',  POST, params);
+  return request('restapi/v1/user', POST, params);
 };
