@@ -1,4 +1,4 @@
-import type { FC } from 'react';
+import * as React from 'react';
 import { useState } from 'react';
 import { useRequest, history } from 'umi';
 import { Toast } from 'antd-mobile';
@@ -6,7 +6,7 @@ import { homeService } from '@/services';
 import styles from './index.less';
 import UseComponents from '@/components/useComponents';
 
-const Home: FC<{ unknown: any }> = () => {
+const Home: React.FC<{ unknown: any }> = () => {
   const TYPE = 1
   const TOKEN = '7573893fr38ovdem51q8vkrqjb5t8l24'
   const info = { type: TYPE, token: TOKEN }
