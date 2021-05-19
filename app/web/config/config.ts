@@ -1,6 +1,6 @@
 import { defineConfig } from 'umi';
 import routes from './routes';
-import { APP_NAME } from '../../../sfe';
+import { APP_OSS, APP_NAME, APP_PROXY, APP_WXCONFIG } from '../../../sfe';
 
 export default defineConfig({
   hash: true,
@@ -22,7 +22,10 @@ export default defineConfig({
   },
   cssModulesTypescriptLoader: {},
   define: {
+    APP_OSS: `${APP_OSS}`,
     APP_NAME: `${APP_NAME}`,
+    APP_PROXY: `${APP_PROXY}`,
+    APP_WXCONFIG: `${APP_WXCONFIG}`,
   },
   favicon: `/${APP_NAME}/public/image/favicon.ico`,
   styles: [],

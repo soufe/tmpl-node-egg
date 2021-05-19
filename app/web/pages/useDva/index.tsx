@@ -1,16 +1,11 @@
-import type { UseModelState, ConnectRC, Loading } from 'umi';
-import { connect } from 'umi';
+import { useDispatch, useSelector } from 'umi';
 import styles from './index.less';
 
-export interface PageProps {
-  useModel: UseModelState;
-  loading: boolean;
-}
+const UseDva: React.FC<{ unknown: any }> = () => {
+  const { welcome } = useSelector((state: any) => state.useModel);
+  const dispatch = useDispatch();
 
-const UseDva: ConnectRC<PageProps> = ({ useModel, dispatch }) => {
-  const { welcome } = useModel;
-
-  const useDispatch = () => {
+  const emitDispatch = () => {
     dispatch({
       type: 'useModel/change',
       payload: {
@@ -20,13 +15,10 @@ const UseDva: ConnectRC<PageProps> = ({ useModel, dispatch }) => {
   };
 
   return (
-    <div className="sou-main-color" onClick={useDispatch}>
+    <div className="sou-main-color" onClick={emitDispatch}>
       <h1 className={styles.h1}>{welcome}</h1>
     </div>
   );
 };
 
-export default connect(({ useModel, loading }: { useModel: UseModelState; loading: Loading }) => ({
-  useModel,
-  loading: loading.models.useModel,
-}))(UseDva);
+export default UseDva;
