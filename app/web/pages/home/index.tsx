@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { useState } from 'react';
 import { useRequest, history } from 'umi';
 import { Toast } from 'antd-mobile';

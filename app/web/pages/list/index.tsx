@@ -1,4 +1,3 @@
-import * as React from 'react';
 import styles from './index.less';
 
 const List: React.FC<{ unknown: any }> = () => {
