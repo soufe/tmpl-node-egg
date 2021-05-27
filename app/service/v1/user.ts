@@ -45,7 +45,7 @@ export default class UserService extends Service {
    */
   public async get(method: any, type: string, token: string): Promise<UserInfo> {
 
-    const result = this.request(method, 'Sougroup/UserCenter/personal_center', {
+    const result = await this.request(method, 'Sougroup/UserCenter/personal_center', {
       data: { fans_token: token, http_request_type: type },
     });
     return result;

@@ -10,9 +10,8 @@ const Home: React.FC<{ unknown: any }> = () => {
   const TOKEN = '7573893fr38ovdem51q8vkrqjb5t8l24'
   const info = { type: TYPE, token: TOKEN }
   const [message, setMessage] = useState('')
-  const { getUserInfo } = homeService
   
-  const { run } = useRequest(getUserInfo, {
+  const { run } = useRequest(homeService.getUserInfo, {
     manual: true,
     onSuccess: (data: { user_info: { nickname: string } }) => {
       const {
@@ -25,6 +24,19 @@ const Home: React.FC<{ unknown: any }> = () => {
       }, 1000);
     },
   });
+
+  // useRequest(() => homeService.getUserInfo(info), {
+  //   onSuccess: (data: { user_info: { nickname: string } }) => {
+  //     const {
+  //       user_info: { nickname },
+  //     } = data;
+  //     setMessage(nickname);
+  //     Toast.info(nickname);
+  //     setTimeout(() => {
+  //       history.push('/useDva');
+  //     }, 1000);
+  //   }
+  // });
 
   return (
     <div className='sou-main-color' onClick={() => run(info)}>
