@@ -1,4 +1,4 @@
-import type { Effect, Reducer, Subscription } from 'umi';
+import type { Effect, ImmerReducer, Subscription } from 'umi';
 
 export interface UseModelState {
   welcome: string;
@@ -11,7 +11,7 @@ export interface UseModelType {
     query: Effect;
   };
   reducers: {
-    change: Reducer<UseModelState>;
+    change: ImmerReducer<UseModelState>;
   };
   subscriptions: {
     setup: Subscription;
@@ -31,10 +31,7 @@ const UseModel: UseModelType = {
   },
   reducers: {
     change(state, action) {
-      return {
-        ...state,
-        ...action.payload,
-      };
+      state.welcome = action.payload;
     },
   },
   subscriptions: {
@@ -43,9 +40,7 @@ const UseModel: UseModelType = {
         if (pathname === '/useDva') {
           dispatch({
             type: 'change',
-            payload: {
-              welcome: 'click me to useDva',
-            },
+            payload: 'click me to useDva',
           });
         }
       });

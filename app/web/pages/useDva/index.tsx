@@ -8,9 +8,7 @@ const UseDva: React.FC<{ unknown: any }> = () => {
   const emitDispatch = () => {
     dispatch({
       type: 'useModel/change',
-      payload: {
-        welcome: 'you got it',
-      },
+      payload: 'you got it'
     });
   };
 

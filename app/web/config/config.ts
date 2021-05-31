@@ -32,7 +32,9 @@ export default defineConfig({
   theme: {
     '@sou-base-color': '#000000',
   },
-  dva: {},
+  dva: {
+    immer: true
+  },
   title: '嗖嗖身边',
   plugins: [ '@alitajs/hd' ],
   hd: {

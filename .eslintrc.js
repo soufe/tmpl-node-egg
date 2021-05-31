@@ -15,6 +15,13 @@ module.exports = {
     'babel/generator-star-spacing': 'off',
     "jsdoc/check-tag-names": 'off',
     "jsdoc/check-param-names": 'off',
-    "no-undef": 'off'
+    "no-undef": 'off',
+    'no-param-reassign': [
+      'error',
+      {
+        props: true,
+        ignorePropertyModificationsFor: ['state', 'ctx'],
+      },
+    ],
   },
 };
