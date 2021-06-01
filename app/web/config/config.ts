@@ -32,6 +32,7 @@ export default defineConfig({
   theme: {
     '@sou-base-color': '#000000',
   },
+  metas: [{ name: 'referrer', content: 'no-referrer' }],
   dva: {
     immer: true
   },
