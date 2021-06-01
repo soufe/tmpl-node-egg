@@ -23,5 +23,6 @@ module.exports = {
         ignorePropertyModificationsFor: ['state', 'ctx'],
       },
     ],
+    'no-underscore-dangle': ['error', { allow: ['_store'] }],
   },
 };
