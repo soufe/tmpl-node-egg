@@ -26,6 +26,8 @@ export default defineConfig({
     APP_NAME: `${APP_NAME}`,
     APP_PROXY: `${APP_PROXY}`,
     APP_WXCONFIG: `${APP_WXCONFIG}`,
+    APP_ENV_TEST: `https://ued.sousoushenbian.cn/`,
+    APP_ENV_PROD: `https://web.sousoushenbian.cn/`,
   },
   favicon: `/${APP_NAME}/public/image/favicon.ico`,
   styles: [],

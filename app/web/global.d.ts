@@ -6,3 +6,5 @@ declare const APP_OSS: any
 declare const APP_NAME: any
 declare const APP_PROXY: any
 declare const APP_WXCONFIG: any
+declare const APP_ENV_TEST: any
+declare const APP_ENV_PROD: any

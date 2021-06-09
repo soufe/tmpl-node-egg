@@ -12,7 +12,7 @@ const Share: React.FC<{ unkonw: any }> = () => {
       title: '嗖嗖身边',
       desc: '嗖嗖身边',
       imgUrl: `${APP_OSS}h5/wx-share/logo.png`,
-      entryUrl: `https://web.sousoushenbian.cn/${APP_NAME}${pathname}${search}`,
+      entryUrl: `${APP_ENV_PROD}${APP_NAME}${pathname}${search}`,
     });
   }, [pathname, search]);
 
